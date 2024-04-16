@@ -24,17 +24,26 @@ body {
 }
 
 /* setting all list type bullet elements to none */
-ul{
+ul {
   list-style-type: none;
 }
 
-a{
-text-decoration: none;
-color: black;
-text-decoration-color: white;
-transition: all 0.3 ease-in-out;
-display: block;
+a {
+  text-decoration: none;
+  color: black;
+  text-decoration-color: white;
+  transition: all 0.3 ease-in-out;
+  display: block;
 }
+/* the top progress bar */
+.progress-bar-onscroll {
+  --progress: 0;
+  background: #333;
+  width: var(--progress);
+  height: .2rem;
+  position: fixed;
+}
+
 /* default media query is desktop 1280-1024 */
 
 /* Hero Section */
@@ -78,7 +87,7 @@ header .nav-container-mobile {
   align-items: center;
   justify-content: center;
   width: 5rem;
-  background-color: #F78888;
+  background-color: #f78888;
 }
 
 /* creating variables for our hamburger menu styling */
@@ -108,7 +117,7 @@ header .hamburger-menu {
   cursor: pointer;
   right: 0.02rem;
   /* the width of the hamburger menu in the X shape*/
-  --x-width:calc(var(var(--ham-height))* 1.41421356237)
+  --x-width: calc(var(var(--ham-height)) * 1.41421356237);
 }
 /* transitioning the hamburger animation */
 .hamburger-menu::before,
@@ -118,11 +127,10 @@ header .hamburger-menu {
   border-radius: var(--bar-radius);
   transform-origin: right center;
   transition: opacity var(--checking-transition),
-  width var(--checking-transition),
-  rotate var(--checking-transition),
-  translate var(--checking-transition),
-  background-color var(--checking-transition);
-  transition: all .2s ease-in-out;
+    width var(--checking-transition), rotate var(--checking-transition),
+    translate var(--checking-transition),
+    background-color var(--checking-transition);
+  transition: all 0.2s ease-in-out;
   /* display: inline; */
   content: "";
   width: var(--bar-width);
@@ -135,11 +143,11 @@ header .hamburger-menu {
   outline: none;
   pointer-events: none;
   /* padding: .2rem; */
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.hamburger-menu:hover{
-  transition: all .2s ease-in-out;
-  padding: .2rem;
+.hamburger-menu:hover {
+  transition: all 0.2s ease-in-out;
+  padding: 0.2rem;
   border-radius: 2rem;
   background: ;
 }
@@ -149,14 +157,13 @@ header .hamburger-menu {
   rotate: -45deg;
   /* width: var(--x-width); */
   translate: 0 calc(var(--bar-height) / -2);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .hamburger-menu:has(input:checked)::after {
   rotate: 45deg;
   /* width: var(--x-width); */
   translate: 0 calc(var(--bar-height) / 2);
-    transition: all .2s ease-in-out;
-
+  transition: all 0.2s ease-in-out;
 }
 
 .hamburger-menu input:checked {
@@ -170,14 +177,14 @@ header .hamburger-menu {
   background: transparent;
   display: block;
   position: absolute;
-  padding-top: calc(var(--ham-height)+ var(--ham-gap) + .1rem );
+  padding-top: calc(var(--ham-height)+ var(--ham-gap) + 0.1rem);
   padding-top: 2rem;
   background-color: #f6a3a300;
   transition: opacity 0.3 ease-in-out;
   transition: text 2 ease-in;
 }
-.hamburger-menu__side-bar.show{
-opacity: 1;
+.hamburger-menu__side-bar.show {
+  opacity: 1;
 }
 .hamburger-menu__side-bar ul {
   display: flex;
@@ -195,27 +202,31 @@ opacity: 1;
 }
 
 /* hiding the hamburger menu from the desktop */
-  header .nav-container-mobile, .hamburger-menu, .hamburger-menu::before, .hamburger-menu::after, .hamburger-menu input  {
-    display: none;
-  }
+header .nav-container-mobile,
+.hamburger-menu,
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  display: none;
+}
 
-  /* designing the buttons */
-  .btn{
-    transition: all .3s ease-in-out;
-    border-radius: 2rem;
-  }
-  .btn:hover{
-    text-decoration: underline;
-    color: #333;
-    text-decoration-color: #777777;
-    text-underline-offset: .5rem;
-    background: #90CCF4;
-    border-radius: 1rem;
-    transition: all .3s ease-in-out;
-    transition: 300ms ease-out;
-    padding: .2rem;
-  }
+/* designing the buttons */
+.btn {
+  transition: all 0.3s ease-in-out;
+  border-radius: 2rem;
+}
+.btn:hover {
+  text-decoration: underline;
+  color: #333;
+  text-decoration-color: #777777;
+  text-underline-offset: 0.5rem;
+  background: #90ccf4;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  transition: 300ms ease-out;
+  padding: 0.2rem;
+}
 
-  .hamburger-menu:has(input:checked) + .hamburger-menu__side-bar{
-    translate: 0;
-  }
+.hamburger-menu:has(input:checked) + .hamburger-menu__side-bar {
+  translate: 0;
+}
