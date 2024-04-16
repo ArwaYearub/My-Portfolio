@@ -1,1 +1,22 @@
 /* this is for media queries */
+
+/*
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+*/
+
+/* phone */
+
+@media all and (max-width: 600px) {
+  /* hiding the nav links  */
+  header .nav-container-desktop {
+    display: none;
+  }
+  /* showing the hamburger menu */
+  header .nav-container-mobile, .hamburger-menu, .hamburger-menu::before,.hamburger-menu::after, .hamburger-menu input  {
+    display: block;
+    display: inline-block;
+  }
+}

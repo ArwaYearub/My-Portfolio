@@ -1,11 +1,221 @@
-/* this is for general styling */
+/* google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* general styling */
 * {
   margin: 0;
   padding: 0;
 }
-body {
-  font-family: "Poppins", sans-serif;
+/* setting up the border box sizing */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
+
+/* html scroll behavior */
 html {
   scroll-behavior: smooth;
 }
+
+/* body text font family */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* setting all list type bullet elements to none */
+ul{
+  list-style-type: none;
+}
+
+a{
+text-decoration: none;
+color: black;
+text-decoration-color: white;
+transition: all 0.3 ease-in-out;
+display: block;
+}
+/* default media query is desktop 1280-1024 */
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+}
+
+/* logo & nav links */
+header {
+  display: flex;
+  background: transparent;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  height: 10vh;
+}
+
+header .nav-container-desktop {
+  display: flex;
+  background-position: 100%;
+  text-align: right;
+  gap: 2rem;
+}
+
+.logo-text {
+  cursor: default;
+}
+.logo-container {
+  font-weight: 600;
+}
+/* hamburger menu work:  */
+
+/* hiding the hamburger menu in the desktop screens */
+header .nav-container-mobile {
+  display: none;
+  display: flex;
+  margin-right: 0;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  background-color: #F78888;
+}
+
+/* creating variables for our hamburger menu styling */
+:root {
+  --bar-width: 2rem;
+  --bar-height: 0.2rem;
+  --bar-radius: 0.5rem;
+  --hamburger-gap: 0.4rem;
+  --ground-color: #333;
+  --background: transparent;
+  --checking-transition: 300ms ease-in-out;
+  /* for the calculus its a triginomatry used to calculate the height of the before and after element so they fit correctly 3 is the number of bars we have and 2 the number of the bars we want to move */
+  --ham-height: calc(var(var--bar-height) * 3 + var(--ham-gap) * 2);
+}
+/* setting the style for the hamburger menu */
+header .hamburger-menu {
+  display: flex;
+  /* margin-right: 20px; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  /* top: 9vh; */
+  z-index: 4;
+  cursor: pointer;
+  right: 0.02rem;
+  /* the width of the hamburger menu in the X shape*/
+  --x-width:calc(var(var(--ham-height))* 1.41421356237)
+}
+/* transitioning the hamburger animation */
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  background-color: var(--ground-color);
+  border-radius: var(--bar-radius);
+  transform-origin: right center;
+  transition: opacity var(--checking-transition),
+  width var(--checking-transition),
+  rotate var(--checking-transition),
+  translate var(--checking-transition),
+  background-color var(--checking-transition);
+  transition: all .2s ease-in-out;
+  /* display: inline; */
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+}
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+  /* padding: .2rem; */
+  transition: all .2s ease-in-out;
+}
+.hamburger-menu:hover{
+  transition: all .2s ease-in-out;
+  padding: .2rem;
+  border-radius: 2rem;
+  background: ;
+}
+/* to change the shape of the hamburger menu to an X whn clicking */
+/* if the hamburger menu input elemnet is checked then select the before hamburger menu*/
+.hamburger-menu:has(input:checked)::before {
+  rotate: -45deg;
+  /* width: var(--x-width); */
+  translate: 0 calc(var(--bar-height) / -2);
+  transition: all .2s ease-in-out;
+}
+.hamburger-menu:has(input:checked)::after {
+  rotate: 45deg;
+  /* width: var(--x-width); */
+  translate: 0 calc(var(--bar-height) / 2);
+    transition: all .2s ease-in-out;
+
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+.hamburger-menu__side-bar {
+  transition: translate var(--checking-transition);
+  max-width: 10rem;
+  margin-right: 0;
+  background: transparent;
+  display: block;
+  position: absolute;
+  padding-top: calc(var(--ham-height)+ var(--ham-gap) + .1rem );
+  padding-top: 2rem;
+  background-color: #f6a3a300;
+  transition: opacity 0.3 ease-in-out;
+  transition: text 2 ease-in;
+}
+.hamburger-menu__side-bar.show{
+opacity: 1;
+}
+.hamburger-menu__side-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* profile container */
+.profile-container {
+  width: 100vh;
+  height: 100vh;
+}
+
+/* hiding the hamburger menu from the desktop */
+  header .nav-container-mobile, .hamburger-menu, .hamburger-menu::before, .hamburger-menu::after, .hamburger-menu input  {
+    display: none;
+  }
+
+  /* designing the buttons */
+  .btn{
+    transition: all .3s ease-in-out;
+    border-radius: 2rem;
+  }
+  .btn:hover{
+    text-decoration: underline;
+    color: #333;
+    text-decoration-color: #777777;
+    text-underline-offset: .5rem;
+    background: #90CCF4;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+    transition: 300ms ease-out;
+    padding: .2rem;
+  }
+
+  .hamburger-menu:has(input:checked) + .hamburger-menu__side-bar{
+    translate: 0;
+  }

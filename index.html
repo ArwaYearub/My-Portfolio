@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arwa Yaareb Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="media.css">
-</head>
-<body>
-    <header></header>
-    <main></main>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <body>
+    
+    <!-- this is the landing page -->
+    <div class="hero-container">
+      <header>
+        <div class="logo-container">
+          <h2 class="logo-text"></h2>Arwa Yaareb</h2>
+        </div>
+        <ul class="nav-container-desktop">
+          <li><a class="btn" href="#about">About</a></li>
+          <li><a class="btn" href="#skills">Skills</a></li>
+          <li><a class="btn" href="#projects">Projects</a></li>
+          <li><a class="btn" href="#contact">Contact me</a></li>
+        </ul>
+        <!-- this is the hamburger menu -->
+        <div class="nav-container-mobile">
+          <label for="hamburger-checkbox" class="hamburger-menu">
+            <input id="hamburger-checkbox" type="checkbox" />
+          </label>
+          <div class="hamburger-menu__side-bar" id="ham-sidebar">
+            <ul class="nav-links-mobile">
+              <li><a class="btn" href="#about">About</a></li>
+              <li><a class="btn" href="#skills">Skills</a></li>
+              <li><a class="btn" href="#projects">Projects</a></li>
+              <li><a class="btn" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="profile-container">
+        <!-- the img styling here is temporary -->
+        <img
+          src="./assets/my-profile-pic.jpg"
+          alt=""
+          style="width: 200px; height: auto"
+        />
+      </div>
+    </div>
+    <main>
+      <section id="about">about</section>
+      <section id="skills">skills</section>
+      <section id="projects">projects</section>
+      <section id="contact">contact</section>
+    </main>
     <footer></footer>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
