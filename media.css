@@ -7,6 +7,26 @@
    480-less    - phone landscape & smaller
 */
 
+/* btn to large sizes */
+@media all and (min-width: 1700px){
+.btn {
+  transition: all 0.3s ease-in-out;
+  border-radius: 2rem;
+}
+.btn:hover {
+  text-decoration: underline;
+  color: #333;
+  text-decoration-color: #777777;
+  text-underline-offset: 0.5rem;
+  background: #90ccf4;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  transition: 300ms ease-out;
+  padding: 0.2rem;
+}
+}
+
+
 /* phone */
 
 @media all and (max-width: 600px) {
@@ -18,5 +38,131 @@
   header .nav-container-mobile, .hamburger-menu, .hamburger-menu::before,.hamburger-menu::after, .hamburger-menu input  {
     display: block;
     display: inline-block;
+    z-index: 10;
+  }
+  .profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-welcome-text{
+    padding-bottom: 10rem;
+  }
+  .profile-img{
+  }
+}
+@media all and (max-width: 530px){
+  .profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-welcome-text{
+    padding-bottom: 10rem;
+  }
+  .profile-img{
+    margin: auto 2rem;
+  }
+}
+
+@media all and (max-width: 1000px){
+  .profile-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+  }
+  .profile-welcome-text{
+    margin-bottom: 10rem;
+    margin-left: 4rem;
+  }
+  .profile-welcome-text :nth-child(1){    
+    font-size: 6rem;
+  transition: all .3s ease-in-out
+
+  }
+  .profile-welcome-text :nth-child(2){    
+    font-size: 2rem;
+  transition: all .3s ease-in-out
+
+  }
+  .profile-welcome-text :nth-child(3){    
+    font-size: 4rem;
+  transition: all .3s ease-in-out
+  }
+  .profile-img{
+  /* position: absolute; */
+  right: 0rem;
+  /* left: 5rem; */
+  width: 60%; 
+  transition: all .3s ease-in-out;
+  }
+
+}
+@media all and (max-width: 800px){
+  .profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-welcome-text{
+    padding-bottom: 15rem;
+    margin-left: 0rem;
+  }
+  .profile-welcome-text :nth-child(1){    
+    font-size: 6rem;
+  transition: all .3s ease-in-out
+
+  }
+  .profile-welcome-text :nth-child(2){    
+    font-size: 2rem;
+  transition: all .3s ease-in-out
+
+  }
+  .profile-welcome-text :nth-child(3){    
+    font-size: 4rem;
+  transition: all .3s ease-in-out
+  }
+  .profile-img{
+  right: 6rem;
+  width: 70%;
+  transition: all .3s ease-in-out;
+}
+
+@media all and (min-width: 1742px){
+ .profile-img{
+  /* position: absolute; */
+  right: 0rem;
+  /* left: 5rem; */
+  width: 50%;
+  transition: all .3s ease-in-out;
+  }
+}
+
+@media all and (min-width: 1805px){
+.profile-img{
+  right: 0rem;
+  width: 50%;
+  transition: all .3s ease-in-out;
+  }
+}
+@media all and (min-width: 1140px){
+.profile-img{
+  right: 0rem;
+  width: 55%;
+  transition: all .3s ease-in-out;
+  }
+}
+@media all and (max-width: 1050px){
+.profile-img{
+  right: 0rem;
+  width: 60%;
+  transition: all .3s ease-in-out;
+  }
+}
+@media all and (max-width: 686px){
+.profile-img{
+  right: 5rem;
+  width: 70%;
+  transition: all .3s ease-in-out;
   }
 }

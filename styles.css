@@ -31,7 +31,7 @@ ul {
 a {
   text-decoration: none;
   color: black;
-  text-decoration-color: white;
+  /* text-decoration-color: white; */
   transition: all 0.3 ease-in-out;
   display: block;
 }
@@ -40,8 +40,9 @@ a {
   --progress: 0;
   background: #333;
   width: var(--progress);
-  height: .2rem;
+  height: 0.2rem;
   position: fixed;
+  z-index: 10;
 }
 
 /* default media query is desktop 1280-1024 */
@@ -54,12 +55,14 @@ a {
 /* logo & nav links */
 header {
   display: flex;
-  background: transparent;
+  /* background: transparent; */
   width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
   height: 10vh;
+  top: 0;
+  border-radius: 200px;
 }
 
 header .nav-container-desktop {
@@ -75,6 +78,7 @@ header .nav-container-desktop {
 .logo-container {
   font-weight: 600;
 }
+
 /* hamburger menu work:  */
 
 /* hiding the hamburger menu in the desktop screens */
@@ -88,6 +92,8 @@ header .nav-container-mobile {
   justify-content: center;
   width: 5rem;
   background-color: #f78888;
+  position: absolute;
+  
 }
 
 /* creating variables for our hamburger menu styling */
@@ -104,6 +110,8 @@ header .nav-container-mobile {
 }
 /* setting the style for the hamburger menu */
 header .hamburger-menu {
+  top: 0;
+  padding-bottom:1rem ;
   display: flex;
   /* margin-right: 20px; */
   align-items: center;
@@ -113,7 +121,7 @@ header .hamburger-menu {
   width: max-content;
   position: absolute;
   /* top: 9vh; */
-  z-index: 4;
+  z-index: 2;
   cursor: pointer;
   right: 0.02rem;
   /* the width of the hamburger menu in the X shape*/
@@ -135,6 +143,7 @@ header .hamburger-menu {
   content: "";
   width: var(--bar-width);
   height: var(--bar-height);
+
 }
 .hamburger-menu input {
   appearance: none;
@@ -214,6 +223,7 @@ header .nav-container-mobile,
 .btn {
   transition: all 0.3s ease-in-out;
   border-radius: 2rem;
+  z-index: 20;
 }
 .btn:hover {
   text-decoration: underline;
@@ -225,8 +235,95 @@ header .nav-container-mobile,
   transition: all 0.3s ease-in-out;
   transition: 300ms ease-out;
   padding: 0.2rem;
+  cursor: pointer;
+  /* z-index: 100; */
 }
+.logo-container{
+  cursor: default;
+}
+
 
 .hamburger-menu:has(input:checked) + .hamburger-menu__side-bar {
   translate: 0;
+}
+
+/* landing page: profile  */
+/* .hero-container {
+  background: transparent;
+  z-index: -1;
+} */
+header{
+  margin-bottom: 0;
+  height: 3rem;
+}
+
+.profile-container {
+  background: #d2d0d0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  width: 100%;
+  position: relative;
+  display: flex;
+  /* margin-left: ; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  /* background-image: url(./assets/image-3000x3141\ \(1\).jpg); */
+
+}
+.profile-img {
+  object-fit: ;
+  position: absolute;
+  /* margin-left: ; */
+  /* height: 230px; */
+  /* object-fit: cover; */
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  /* left:20rem; */
+  /* top: rem; */
+  border-radius: 2rem;
+  z-index: 1;
+  transition: all .3s ease-in-out
+}
+.profile-welcome-text{
+  color: white;
+  z-index: 2;
+  padding-left: 2rem;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4rem;
+  margin-top: 4rem;
+  transition: all .3s ease-in-out
+}
+/* the welcome make it a little bit far from the other text */
+.profile-welcome-text :nth-child(1){
+  font-size: 8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  padding-right: 3rem;
+  transition: all .3s ease-in-out
+
+}
+.profile-welcome-text :nth-child(2){
+  font-size: 4rem;
+  font-weight: 200;
+  text-shadow: #777777;
+  border-bottom: #333;
+  z-index: 3;
+  transition: all .3s ease-in-out
+
+}
+.profile-welcome-text :nth-child(3){
+  font-size: 6rem;
+  font-weight: 400;
+  text-shadow: #777777;
+  border-bottom: #333;
+  z-index: 3;
+  transition: all .3s ease-in-out
+
 }
