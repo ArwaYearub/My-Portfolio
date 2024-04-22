@@ -7,26 +7,6 @@
    480-less    - phone landscape & smaller
 */
 
-/* btn to large sizes */
-@media all and (min-width: 1700px){
-.btn {
-  transition: all 0.3s ease-in-out;
-  border-radius: 2rem;
-}
-.btn:hover {
-  text-decoration: underline;
-  color: #333;
-  text-decoration-color: #777777;
-  text-underline-offset: 0.5rem;
-  background: #90ccf4;
-  border-radius: 1rem;
-  transition: all 0.3s ease-in-out;
-  transition: 300ms ease-out;
-  padding: 0.2rem;
-}
-}
-
-
 /* phone */
 
 @media all and (max-width: 600px) {
@@ -35,12 +15,17 @@
     display: none;
   }
   /* showing the hamburger menu */
-  header .nav-container-mobile, .hamburger-menu, .hamburger-menu::before,.hamburger-menu::after, .hamburger-menu input  {
+  header .nav-container-mobile,
+  .hamburger-menu,
+  .hamburger-menu::before,
+  .hamburger-menu::after,
+  .hamburger-menu input {
     display: block;
     display: inline-block;
     z-index: 10;
   }
-  .profile-container{
+  /* --------------left------------- */
+  /* .profile-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,8 +34,240 @@
     padding-bottom: 10rem;
   }
   .profile-img{
+  } */
+  /* -----------------left--------------- */
+  .arrow-moving-container {
+    left: 5%;
+  }
+  .arrow-down {
+    width: 50px;
   }
 }
+@media all and (min-width: 400px){
+  .profile-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .profile-img {
+    border-radius: 50%;
+    width: 400px;
+    bottom: 2rem;
+    right: 0;
+    /* height: 400px; */
+  }
+  .profile-welcome-text {
+    /* display: inline; */
+    margin-top: 3rem;
+    /* left: 30px; */
+    /* top: 20px; */
+    left: 0;
+    margin-left: 0;
+  }
+  .welcome {
+    font-size: 40px;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .iam {
+    font-size: 30px;
+  }
+  .arwa {
+    font-size: 40px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  #typewriter {
+    font-size: 30px;
+    margin-top: 0;
+    padding-left: 4px;
+    top: 0;
+  }
+  .A {
+    font-size: 30px;
+    font-weight: 300;
+  }
+  #cursor {
+    font-size: 40px;
+  }
+  .arrow-moving-container {
+    left: 5%;
+  }
+  .arrow-down {
+    width: 60px;
+  }
+}
+
+/* sm screens */
+@media all and (min-width: 640px) {
+  .profile-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .profile-img {
+    width: 400px;
+  }
+  .profile-welcome-text {
+    display: inline;
+    margin-top: 1rem;
+    /* left: 30px; */
+    margin-left: rem;
+  }
+  .welcome {
+    font-size: 60px;
+    justify-content: center;
+  }
+  .iam {
+    font-size: 40px;
+  }
+  .arwa {
+    font-size: 50px;
+  }
+  #typewriter {
+    font-size: 50px;
+  }
+  .A {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #cursor {
+    font-size: 55px;
+  }
+  .arrow-moving-container {
+    left: 10%;
+  }
+  .arrow-down {
+    width: 80px;
+  }
+}
+/* md screens */
+@media all and (max-width: 768px) {
+.profile-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .profile-img {
+    width: 400px;
+  }
+  .profile-welcome-text {
+    display: inline;
+    margin-top: 1rem;
+    left: 0;
+    margin-left: 0;
+  }
+  .welcome {
+    font-size: 50px;
+    justify-content: center;
+    margin-bottom: 0;
+
+  }
+  .iam {
+    font-size: 40px;
+  }
+  .arwa {
+    font-size: 45px;
+  }
+  #typewriter {
+    font-size: 45px;
+  }
+  .A {
+    font-size: 40px;
+    font-weight: 300;
+  }
+  #cursor {
+    font-size: 45px;
+  }
+  .arrow-moving-container {
+    left: 20%;
+  }
+  .arrow-down {
+    width: 80px;
+  }
+}
+/* lg screens */
+@media all and (min-width: 1024px) {
+  .profile-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .profile-img {
+    width: 500px;
+  }
+  .profile-welcome-text {
+    margin-top: ;
+    /* left: 30px; */
+    margin-left: rem;
+  }
+  .welcome {
+    font-size: 50px;
+    justify-content: center;
+  }
+  .iam {
+    font-size: 30px;
+  }
+  .arwa {
+    font-size: 50px;
+  }
+  #typewriter {
+    font-size: 50px;
+  }
+  .A {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #cursor {
+    font-size: 55px;
+  }
+  .arrow-moving-container {
+    left: 30%;
+  }
+  .arrow-down {
+    width: 80px;
+  }
+}
+/* xl screens */
+@media all and (min-width: 1280px) {
+  .profile-container {
+    width: 100%;
+  }
+  .profile-img {
+    width: 700px;
+  }
+  .profile-welcome-text {
+    margin-top: 8rem;
+    /* left: 30px; */
+    margin-left: 10rem;
+  }
+  .welcome {
+    font-size: 66px;
+    justify-content: center;
+  }
+  .iam {
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .arwa {
+    font-size: 50px;
+  }
+  #typewriter {
+    font-size: 50px;
+  }
+  .A {
+    font-size: 40px;
+    font-weight: 300;
+  }
+  #cursor {
+    font-size: 55px;
+  }
+  .arrow-moving-container {
+    left: 30%;
+  }
+  .arrow-down {
+    width: 60px;
+  }
+}
+
+/* -----------------LEFT--------------- */
+/*
 @media all and (max-width: 530px){
   .profile-container{
     display: flex;
@@ -69,19 +286,19 @@
   .profile-container{
     display: flex;
     justify-content: baseline;
-    align-items: center;
+    align-items: baseline;
   }
   .profile-welcome-text{
-    margin-bottom: 10rem;
+    margin-bottom: 9rem;
     margin-left: 4rem;
   }
   .profile-welcome-text :nth-child(1){    
-    font-size: 6rem;
+    font-size: 8rem;
   transition: all .3s ease-in-out
 
   }
   .profile-welcome-text :nth-child(2){    
-    font-size: 2rem;
+    font-size: 5rem;
   transition: all .3s ease-in-out
 
   }
@@ -90,10 +307,11 @@
   transition: all .3s ease-in-out
   }
   .profile-img{
-  /* position: absolute; */
-  right: 0rem;
-  /* left: 5rem; */
-  width: 60%; 
+  position: absolute;
+  right: 2rem;
+
+  /* left: 5rem; 
+  width: 80%; 
   transition: all .3s ease-in-out;
   }
 
@@ -127,12 +345,12 @@
   width: 70%;
   transition: all .3s ease-in-out;
 }
-
+}
 @media all and (min-width: 1742px){
  .profile-img{
-  /* position: absolute; */
+  /* position: absolute; 
   right: 0rem;
-  /* left: 5rem; */
+  /* left: 5rem; 
   width: 50%;
   transition: all .3s ease-in-out;
   }
@@ -166,3 +384,15 @@
   transition: all .3s ease-in-out;
   }
 }
+@media all and (max-width: 1400px){
+.profile-img{
+  /* right: 5rem;
+  
+  width: 70%;
+  transition: all .3s ease-in-out;
+  }
+}
+
+*/
+
+/* -----------------LEFT--------------- */
