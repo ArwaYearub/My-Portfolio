@@ -242,9 +242,64 @@
               </ul>
             </div>
         </div>
+        <div class="next-arrow">
+          <img 
+          src="./assets/skills/arrow-down-white.png" 
+          alt="arrow down"
+          class="arrow-down skills-arrow"
+          onclick="location.href='./#projects'"
+          />
+        </div>
+        </div>
       </section>
-      <section id="projects">projects</section>
-      <section id="contact">contact</section>
+      <section id="projects">
+          <div class="container">
+            <div class="middle">
+              <h2>My Hmble Projects</h2>
+            </div>
+            <div class="cards-container">
+            <div class="card1 card">
+              <img src="./assets/projects/hp-resized.png" alt="Harry potter picture representing a project" class="img-project">
+              <h3>Harry Potter Table</h3>
+              <p class="p-about">HTML, CSS</p>
+              <div class="btn projects-btn"  onclick="location.href='https://github.com/ArwaYearub/Harry-Potter-characters-Table.git'">Source Code</div>
+            </div>
+            <div class="card2 card">
+              <img src="./assets/projects/todolist-project.png" alt="todolist image representing a todo list project using react" class="img-project">
+              <h3>To do list</h3>
+              <p class="p-about">React</p>
+              <div class="btn projects-btn" onclick="location.href='https://github.com/ArwaYearub/to-do-list-using-react.git'">Source Code</div>
+            </div>
+            <div class="card3 card">
+              <img src="./assets/projects/type.png" alt="a photo of a project i made type writer" class="type img-project">
+              <h3>Type Writing Effect</h3>
+              <p class="p-about">HTML, CSS, JavaScript</p>
+             <div class="btn projects-btn" onclick="location.href='https://github.com/ArwaYearub/type-writing-using-html-css.git">source code</div>
+            </div>
+            </div>
+          </div>
+      </section>
+      <section id="contact">
+                  <div class="middle"><h2>Get In Touch</h2> <br> <p class="move-down">By</p></div>
+
+        <div class="contact-container">
+          <div class="form-container">
+            <h3>Sending Me a Message</h3>
+
+            <input id="input" type="text" placeholder="Full Name" required> <br>
+            <input id="input" type="email" placeholder="Email Address"> <br>
+            <textarea name="Message" id="input" cols="30" rows="10" placeholder="Message" required></textarea> <br>
+            <div class="middle-send">
+            <button class="btn send-btn">Send</button>
+            </div>
+          </div>
+          <div class="socials">
+          <div>
+            <h3>Or through my socials</h3>
+          </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script src="app.js"></script>

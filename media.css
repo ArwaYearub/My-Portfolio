@@ -459,6 +459,10 @@
 
 /* -----------------LEFT--------------- */
 @media all and (max-width: 600px) {
+  #skills{
+    height: 100%;
+    width: 100%;
+  }
   .about-container-middle-wrapper {
     width: 100%;
     height: inherit;
@@ -496,4 +500,38 @@
     align-items: center;
     /* flex-direction: column; */
   }
+  .skills-details-upper-container, .skills-list{
+    font-display: flex;
+    flex-direction: column;
+  }
+  .skills-details-lower-container .skills-list{
+    display: flex;
+    flex-direction: column;
+  }
+  .skills-details-container{
+    margin-top: 0;
+    /* padding-top: 1rem; */
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .skills-list li h3{
+    font-size: 20px;
+  }
+  .kills-type-text{
+    font-size: large;
+  }
+  #contact{
+    width: 100%;
+
+  }
+} 
+
+
+@media all and (max-width: 400px){
+  .skills-arrow{
+    /* left: 5rem; */
+    /* right: 10%; */
+    /* left: 0; */
+  }
+
 }
